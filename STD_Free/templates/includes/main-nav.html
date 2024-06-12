@@ -1,0 +1,56 @@
+<div class="collapse navbar-collapse all-nav" id="all-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="logo-font font-weight-bold nav-link text-black mr-5" id="all-items-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Items
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-items-link">
+                <a href="{% url 'items' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'items' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                <a href="{% url 'items' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+                <a href="{% url 'items' %}?sort=location&direction=asc" class="dropdown-item">By Location</a>
+                <a href="{% url 'items' %}" class="dropdown-item">All Items</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="collapse navbar-collapse all-nav" id="video-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item dropdown">
+            <a href="#" class="logo-font font-weight-bold nav-link text-black mr-5" id="video-items-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Videos
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="video-items-link">
+                <a href="{% url 'items' %}?category=videos" class="dropdown-item">Normal speed</a>
+                <a href="{% url 'items' %}?category=aerial" class="dropdown-item">Aerial</a>
+                <a href="{% url 'items' %}?category=time_lapses" class="dropdown-item">Timelapse</a>
+                <a href="{% url 'items' %}?category=slowmo" class="dropdown-item">Slow-mo</a>
+                <a href="{% url 'items' %}?category=videos,aerial,time_lapses,slowmo" class="dropdown-item">All Videos</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="collapse navbar-collapse all-nav" id="photo-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item dropdown">
+            <a href="{% url 'items' %}?category=photos" class="logo-font font-weight-bold nav-link text-black mr-5" id="photo-items-link" aria-haspopup="true" aria-expanded="false">
+                Photos
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="collapse navbar-collapse all-nav" id="feed-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item dropdown">
+            <a href="#" class="logo-font font-weight-bold nav-link text-black mr-5" id="feed-link" aria-haspopup="true" aria-expanded="false">
+                Feed
+            </a>
+            
+        </li>
+    </ul>
+</div>
